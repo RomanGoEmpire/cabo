@@ -2,6 +2,8 @@ package main
 
 import (
 	"testing"
+
+	"github.com/RomanGoEmpire/cabo/models"
 )
 
 const (
@@ -17,9 +19,9 @@ func TestNewDeck(t *testing.T) {
 	// Sum of all cards
 	want := 338
 
-	deck := NewDeck()
+	deck := models.NewDeck()
 	got := 0
-	for _, card := range deck {
+	for _, card := range deck.Draw {
 		got += int(card.Value)
 	}
 
